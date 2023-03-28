@@ -1,7 +1,6 @@
 import express, { json } from "express";
 import dotenv from 'dotenv';
-import upload from "./middleware/multer.js";
-import multer from "multer";
+import upload from "./src/middleware/multer.js";
 const app = express();
 
 //Settings
