@@ -1,6 +1,6 @@
 # Image Upload
 
-## Luis Aneudy Pq
+## Luis Aneudy 
 
 
-<p> Desde Readme </p>
+<p> Desde Readmed </p>
