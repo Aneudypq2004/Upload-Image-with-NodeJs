@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>Mastering Node</title>
+</head>
+
+
+<body class="grid place-items-center max-sm:columns-2 bg-gray-200">
+
+
+    <h1 class="text-center uppercase m-4 tracking-tighter text-indigo-900 text-4xl"><%- data.name -%></h1>
+
+    <form action="/uploads" method="post" class="p-60 shadow-xl grid gap-11" enctype="multipart/form-data">
+
+        <div>
+            <img src=<%- data.name -%> alt=<%- data.name -%> srcset="">
+        </div>
+
+        <input type="file" class="" name="image">
+
+        <button type="submit" class="uppercase bg-indigo-800 px-10 py-6  mt-4 rounded-lg
+        text-white hover:bg-indigo-900 transition-all 
+        "> Send </button>
+    </form>
+
+    
+
+
+</body>
+
+</html>
