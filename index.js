@@ -2,6 +2,7 @@ import express, { json } from "express";
 import dotenv from 'dotenv';
 import upload from "./src/middleware/multer.js";
 const app = express();
+import fs from 'fs'
 
 //Settings
 
@@ -29,10 +30,41 @@ app.get('/', (req, res) => {
 })
 
 
-app.post('/uploads', upload , (req, res) => {
-    
-    res,json({msg : "Everything is fine"});
-} )
+
+app.post('/uploads', (req, res) => {
+
+    upload(req, res, function (err) {
+
+        if (err) {
+            const error = new Error("The file is too heavy");
+            res.json({ msg: error.message });
+
+        } else {
+
+            res.render('download', { data: req.file })
+        }
+    })
+
+})
+
+app.post('/download/:image', (req, res) => {
+    const { image } = req.params
+    res.download(`./src/public/uploads/${image}`)
+})
+
+app.post('/delete/:image', async (req, res) => {
+    const { image } = req.params;
+
+    await fs.unlink(`./src/public/uploads/${image}` ,(err) => {
+
+        if (err) {
+            return err
+        }
+    })
+
+    res.json({ msg: "SUCCESSFULLY DELETED" })
+
+})
 
 
 

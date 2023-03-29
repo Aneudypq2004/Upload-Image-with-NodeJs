@@ -10,12 +10,12 @@
 </head>
 
 
-<body class="grid place-items-center max-sm:columns-2 bg-gray-200">
+<body class="bg-gray-200 mx-auto my-0 w-11/12">
 
 
-    <h1 class="text-center uppercase m-4 tracking-tighter text-indigo-900 text-4xl"><%- data.name -%></h1>
+    <h1 class="text-center text-2xl font-semibold mt-12 mb-12 text-indigo-700">Send Image</h1>
 
-    <form action="/uploads" method="post" class="p-60 shadow-xl grid gap-11" enctype="multipart/form-data">
+    <form action="/uploads" method="post" class="p-12 shadow-xl grid place-items-center gap-11 lg:p-20" enctype="multipart/form-data">
 
         <div>
             <img src=<%- data.name -%> alt=<%- data.name -%> srcset="">
@@ -23,8 +23,9 @@
 
         <input type="file" class="" name="image">
 
-        <button type="submit" class="uppercase bg-indigo-800 px-10 py-6  mt-4 rounded-lg
-        text-white hover:bg-indigo-900 transition-all 
+        <button type="submit" class="p-6 mt-6 bg-amber-400 text-lg w-1/4
+        rounded-lg mb-10 uppercase hover:bg-amber-600 transition-all duration-700
+        
         "> Send </button>
     </form>
 
