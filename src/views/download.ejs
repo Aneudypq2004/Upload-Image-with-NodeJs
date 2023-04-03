@@ -15,11 +15,11 @@
 
     <div class="shadow-xl grid place-items-center ">
 
-        <img src="/uploads/<%-data.filename-%>" alt="Upload Image" width="400" height="200">
+        <img src="/uploads/<%-data?.filename-%>" alt="Upload Image" width="400" height="200">
 
         <div class="flex gap-4 mt-10">
 
-            <form action="/download/<%-data.filename-%>" method="post">
+            <form action="/download/<%-data?.filename-%>" method="post">
 
                 <button type="submit" id="download" class="p-6 bg-amber-400 text-lg w-80
                 rounded-lg mb-10 uppercase hover:bg-amber-600 transition-all duration-700    
@@ -28,7 +28,7 @@
             </form>
 
 
-            <form action="/delete/<%-data.filename-%>" method="post">
+            <form action="/delete/<%-data?.filename-%>" method="post">
 
                 <button type="submit" id="download" class="p-6 bg-red-400 text-lg w-80
                 rounded-lg mb-10 uppercase hover:bg-red-600 transition-all duration-700    

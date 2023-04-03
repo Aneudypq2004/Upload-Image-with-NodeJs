@@ -1,5 +1,4 @@
 import multer from "multer";
-import sharp from "sharp";
 
 import { v4 as uuidV4 } from "uuid";
 
@@ -14,6 +13,7 @@ const storage = multer.diskStorage({
 
         const ImageName = uuidV4() + '.' + mime;
 
+
         cb(null, ImageName)
     },
 
@@ -27,9 +27,16 @@ const upload = multer({
     limits: { fileSize: 1000000 },
 
     fileFilter: (req, file, cb) => {
-        console.log(file)
 
-        cb(null, true)
+        if (file.mimetype == 'image/jpeg' ||
+            file.mimetype == "image/png" ||
+            file.mimetype == "image/jpg") {
+            cb(null, true);
+
+        } else {
+            cb(null, false)
+        }
+
     }
 
 

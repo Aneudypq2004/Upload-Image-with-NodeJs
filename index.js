@@ -12,8 +12,6 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', './src/views');
 app.use(express.static('./src/public'));
 
-//Routes
-
 
 
 //Multer Eror
@@ -22,9 +20,8 @@ app.get('/', (req, res) => {
 
 
     const data = {
-        name: "Upload Image",
-        height: '20cm',
-        width: '30'
+
+        name: "Upload Image"
     }
     res.render('index', { data })
 })
@@ -40,17 +37,28 @@ app.post('/uploads', (req, res) => {
             res.json({ msg: error.message });
 
         } else {
+            
+            if (req.file) {
+                res.render('download', { data: req.file });
 
-            res.render('download', { data: req.file })
+            } else {
+                res.json({ msg: 'File no support' });
+
+            }
+
         }
     })
 
 })
 
+//Download Image
+
 app.post('/download/:image', (req, res) => {
     const { image } = req.params
     res.download(`./src/public/uploads/${image}`)
 })
+
+//Delete Image to the server
 
 app.post('/delete/:image', async (req, res) => {
     const { image } = req.params;
