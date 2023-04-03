@@ -55,7 +55,7 @@ app.post('/download/:image', (req, res) => {
 app.post('/delete/:image', async (req, res) => {
     const { image } = req.params;
 
-    await fs.unlink(`./src/public/uploads/${image}` ,(err) => {
+    await fs.unlink(`./src/public/uploads/${image}`, (err) => {
 
         if (err) {
             return err
