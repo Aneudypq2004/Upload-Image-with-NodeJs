@@ -25,7 +25,7 @@ Project to improve my skills in nodeJS, I use multer , that is a middleware of n
 2. Open the editor and run the command ``` npm install ```
 3. Run ``` npm run dev ``` to start the project
 4. Run ``` npm run build ``` to use tailwind and change the styles of the project
-5. Go to [http://localhost:3000]
+5. Go to (http://localhost:3000)
 
 
 > Made by [Aneudypq](https://www.instagram.com/aneudypq) :heart:
