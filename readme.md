@@ -1,6 +1,6 @@
 # Image Uploads
 
-Project to improve my skills in nodeJS, I use multer , is a middleware of node to upload images.
+Project to improve my skills in nodeJS, I use multer , that is a middleware of node to upload files to the server
 
 
 ```js
@@ -21,11 +21,13 @@ Project to improve my skills in nodeJS, I use multer , is a middleware of node t
 
 ```
 
+1. Dowload Repository or git pull to the project
+2. Open the editor and run the command ``` npm install ```
+3. Run ``` npm run dev ``` to start the project
+4. Run ``` npm run build ``` to use tailwind and change the styles of the project
 
 
-
-
-> Made by [Aneudypq](https://www.instagram.com/aneudypq)
+> Made by [Aneudypq](https://www.instagram.com/aneudypq) :heart:
 
 
 > #Learning Node
