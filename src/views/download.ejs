@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Image</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+
+<body class="bg-gray-200 mx-auto w-11/12 my-10">
+
+    <h1 class="text-center text-4xl font-semibold  text-indigo-700 mb-8">Share the link with your friend</h1>
+
+    <div class="shadow-xl grid place-items-center ">
+
+        <img src="/uploads/<%-data.filename-%>" alt="Upload Image" width="400" height="200">
+
+        <div class="flex gap-4 mt-10">
+
+            <form action="/download/<%-data.filename-%>" method="post">
+
+                <button type="submit" id="download" class="p-6 bg-amber-400 text-lg w-80
+                rounded-lg mb-10 uppercase hover:bg-amber-600 transition-all duration-700    
+                ">Descargar</button>
+
+            </form>
+
+
+            <form action="/delete/<%-data.filename-%>" method="post">
+
+                <button type="submit" id="download" class="p-6 bg-red-400 text-lg w-80
+                rounded-lg mb-10 uppercase hover:bg-red-600 transition-all duration-700    
+                ">Delete</button>
+
+            </form>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
