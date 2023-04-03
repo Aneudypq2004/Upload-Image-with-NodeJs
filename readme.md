@@ -31,9 +31,3 @@ Project to improve my skills in nodeJS, I use multer , is a middleware of node t
 > #Learning Node
 
 
-
-
-
-
-
-<p> Desde Readmed </p>
